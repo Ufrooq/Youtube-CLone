@@ -25,26 +25,35 @@ const Nav = () => {
     height: "42px",
   };
   return (
-    <div className="w-full grid grid-cols-6 items-center justify-between shadow-md p-3">
-      <h1 className="font-bold text-3xl text-red-500">YouTube</h1>
-      <div className="flex items-center gap-5 col-span-4">
-        <div className="bg-customGrey flex items-center outline-1 w-full rounded-full overflow-hidden">
-          <input
-            className="w-full bg-transparent outline-none placeholder:text-white ms-5 text-white"
-            placeholder="Search"
-            type="text"
-          />
-          <button>
-            <AiOutlineSearch style={SearchIconStyle} />
-          </button>
+    <>
+      <div className="w-full grid grid-cols-6 items-center justify-between p-5 relative">
+        <div className="flex items-center justify-evenly">
+          <div className="w-10 h-7 relative cursor-pointer active:pt-10">
+            <span className="w-8 h-1 bg-red-500 absolute top-[4px] rounded-full"></span>
+            <span className="w-8 h-1 bg-red-500 absolute top-[14px] rounded-full"></span>
+            <span className="w-8 h-1 bg-red-500 absolute top-[24px] rounded-full"></span>
+          </div>
+          <h1 className="font-bold text-3xl text-red-500">YouTube</h1>
         </div>
-        <BiSolidMicrophone style={IconStyle} />
+        <div className="flex items-center gap-5 col-span-4">
+          <form className="bg-customGrey flex items-center outline-1 w-full rounded-full overflow-hidden">
+            <input
+              className="w-full bg-transparent outline-none placeholder:text-white ms-5 text-white"
+              placeholder="Search"
+              type="text"
+            />
+            <button>
+              <AiOutlineSearch style={SearchIconStyle} />
+            </button>
+          </form>
+          <BiSolidMicrophone style={IconStyle} />
+        </div>
+        <div className="flex justify-end gap-5">
+          <BiSolidCameraMovie style={IconStyle} />
+          <BiSolidBell style={IconStyle} />
+        </div>
       </div>
-      <div className="flex justify-end gap-5">
-        <BiSolidCameraMovie style={IconStyle} />
-        <BiSolidBell style={IconStyle} />
-      </div>
-    </div>
+    </>
   );
 };
 
