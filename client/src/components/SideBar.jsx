@@ -1,48 +1,84 @@
 import React from "react";
-import { mainLinks, secondaryLinks } from "../utils/sideBarIcons.jsx";
+import {
+  helpLinks,
+  mainLinks,
+  secondaryLinks,
+  subscriptionLinks,
+  textLinks,
+} from "../utils/sideBarIcons.jsx";
 
 const SideBar = () => {
   return (
-    <div className="w-3/12 h-[92.5vh] overflow-auto text-white">
+    <div className="w-[18%] h-[92.5vh] overflow-auto text-white bg-customGrey">
       <ul>
         {mainLinks?.map((link) => (
-          <li key={link.name} className="bg-customGrey py-2 pl-6">
-            <a href="" className="flex gap-5 transition hover:opacity-0">
+          <li
+            key={link.name}
+            className="py-4 pl-6 transition hover:bg-zinc-500"
+          >
+            <a href="" className="flex gap-6">
               <p>{link.icon}</p>
               <div>{link.name}</div>
             </a>
           </li>
         ))}
       </ul>
-      <hr />
+      <hr className="ms-2" />
       <ul>
         {secondaryLinks?.map((link) => (
-          <li key={link.name}>
-            <a
-              href=""
-              className="flex gap-10 px-5 py-3 bg-customGrey transition hover:bg-red-200"
-            >
+          <li
+            key={link.name}
+            className="py-4 pl-6 transition hover:bg-zinc-500"
+          >
+            <a href="" className="flex gap-6">
               <p>{link.icon}</p>
               <div>{link.name}</div>
             </a>
           </li>
         ))}
       </ul>
-      <hr />
+      <hr className="ms-2" />
       <ul>
-        {mainLinks?.map((link) => (
-          <li key={link.name}>
-            <a
-              href=""
-              className="flex gap-10 px-5 py-3 bg-customGrey transition hover:bg-red-200"
-            >
+        {subscriptionLinks?.map((link) => (
+          <li
+            key={link.name}
+            className="py-4 pl-6 transition hover:bg-zinc-500"
+          >
+            <a href="" className="flex gap-6">
               <p>{link.icon}</p>
               <div>{link.name}</div>
             </a>
           </li>
         ))}
       </ul>
-      <hr />
+      <hr className="ms-2" />
+      <ul>
+        {helpLinks?.map((link) => (
+          <li
+            key={link.name}
+            className="py-4 pl-6 transition hover:bg-zinc-500"
+          >
+            <a href="" className="flex gap-6">
+              <p>{link.icon}</p>
+              <div>{link.name}</div>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <hr className="ms-2" />
+      <ul className="flex flex-wrap gap-2 p-4 text-sm">
+        {textLinks[0]?.map((name) => (
+          <li key={name}>{name}</li>
+        ))}
+      </ul>
+      <hr className="ms-2" />
+      <ul className="flex flex-wrap gap-2 p-4 text-sm">
+        {textLinks[1]?.map((name) => (
+          <li key={name}>{name}</li>
+        ))}
+      </ul>
+      <hr className="ms-2" />
+      <span className="text-sm p-4">Copyright@ umar</span>
     </div>
   );
 };
