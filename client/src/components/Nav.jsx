@@ -26,8 +26,8 @@ const Nav = () => {
   };
   return (
     <>
-      <div className="w-full grid grid-cols-6 items-center justify-between p-5 relative">
-        <div className="flex items-center justify-evenly">
+      <div className="w-full bg-black grid grid-cols-6 items-center justify-between p-5 z-20 sticky top-0">
+        <div className="flex items-center justify-between px-2">
           <div className="w-10 h-7 relative cursor-pointer active:pt-10">
             <span className="w-8 h-1 bg-red-500 absolute top-[4px] rounded-full"></span>
             <span className="w-8 h-1 bg-red-500 absolute top-[14px] rounded-full"></span>
